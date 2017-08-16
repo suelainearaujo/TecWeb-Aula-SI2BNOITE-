@@ -1,0 +1,83 @@
+<meta charset="UTF-8">
+<meta name="author" content="Raphael ferreira da Silva - 1701619 Suelaine Araujo dos Santos - 1701618">
+
+<p><strong>1) Da lista de tecnologias abaixo, aponte qual é executada no cliente e qual é executada no servidor </strong></p>
+<table border="1">
+	<tr><th>Tecnologia</th><th>Cliente</th><th>Servidor</th></tr>
+	<tr><td>Apache</td><td>&nbsp;</td><td>x</td></tr>
+	<tr><td>JavaScript</td><td>x</td><td>&nbsp;</td></tr>
+	<tr><td>Tomcat</td><td>&nbsp;</td><td>x</td></tr>
+	<tr><td>Java</td><td>&nbsp;</td><td>x</td></tr>
+	<tr><td>HTML</td><td>x</td><td>&nbsp;</td></tr>
+	<tr><td>PHP</td><td>&nbsp;</td><td>x</td></tr>
+	<tr><td>Apache</td><td>&nbsp;</td><td>x</td></tr>
+	<tr><td>MySQL</td><td>&nbsp;</td><td>x</td></tr>
+	<tr><td>XHTML</td><td>x</td><td>&nbsp;</td></tr>
+	<tr><td>MongoDB</td><td>&nbsp;</td><td>x</td></tr>
+	<tr><td>CSS</td><td>x</td><td>&nbsp;</td></tr>
+</table>
+
+<p><strong>2) Aponte as regiões da URL <code>http://www.impacta.com.br/eventos/default.php</code></strong></p>
+
+<p>RESPOSTA: HTTP <b>Protocolo</b><br>Impacta.com.br <b> Dominio</b><br> Eventos<b> Path</b><br> Default.php<b> Recurso</b><br></p>
+
+<p><strong>3) Quais outros protocolos de comunicação para troca de mensagens via internet existem? Pesquise e cite 3 exemplos, descrevendo sua função e aplicação.</strong></p>
+<ul>
+	<li>
+		<p>
+			PROTOCOLO 1: <b>FTP </b>:Usado para downloads de arquivos.
+		</p>
+	</li>
+	<li>
+		<p>
+			PROTOCOLO 2:<b>HTTP </b>:Protocolo usado para trocar informações.
+		</p>
+	</li>
+	<li>
+		<p>
+			PROTOCOLO 3:<b>HTTPS </b>:Protocolo usado para trocar informações criptografadas.
+		</p>
+	</li>
+</ul>
+
+<p><strong>4) Explore os sites de hospedagem do  (<a href="http://www.uolhost.uol.com.br/" target="_blank">http://www.uolhost.uol.com.br/</a>) e da LOCAWEB (<a href="https://www.locaweb.com.br" target="_blank">https://www.locaweb.com.br</a>), veja os serviços que eles oferecem. Qual desses serviços (em cada site) seria mais adequado para o seu site de desenvolvedor (páginas estáticas) e para a sua aplicação web?</strong></p>
+
+<p>RESPOSTA:</p><br>
+Uol, porque o possui mais recursos que a Locaweb. O Uol oferece recursos de Domínios adicionais, Construtor de sites, Estatísticas de visitação, Transferência de arquivos, Disco SSD, Integração com GitHub e Certificado SSL grátis. Já o site da Locaweb só me oferece poucos recursos, como: Criador de Sites, Registro de Domínio, Acessibilidade, Multiplataforma, Parceria e Instalador de app.<br>
+
+<p><strong>5) Pequisem sobre as limitações do HTTP 1.1 e como o HTTP2 vence essa limitação, cite 2 dessas limitações e suas respostas no HTTP2</strong></p>
+
+<p>RESPOSTA:<br>
+
+<b>Compressão automática</b><br>
+
+<p>No HTTP 1.1 habilitamos o GZIP para comprimir as informações que mandamos em nossas respostas. Uma boa prática que precisa ser habilitada explicitamente. No HTTP 2 GZIP é padrão e obrigatório.
+
+Somente os headers que mudam são re-enviados
+
+No HTTP 1.1 os headers são enviados em plain text, em cada requisição (o famoso User-Agent por exemplo). No HTTP 2 os headers são binários e comprimidos, diminuindo o volume de dados. Além disso, é possível reaproveitar os headers para as requisições seguintes. Dessa forma, só temos que mandar os cabeçalhos que mudam. Isso reduz as requisições e as deixa menos volumosas.</p>
+
+<b>Paralelização de requests</b><br>
+
+<p>Para cada recurso que uma página possui, um request feito então para carrega-los mais rapidamente precisamos paralelizar essas requisições. O problema é que o HTTP 1.1 é um protocolo sequencial, só podemos fazer 1 request por vez. A solução é abrir mais de uma conexão ao mesmo tempo, paralelizando os requests em 4 a 8 requests (é o limite que temos). Uma forma comum de lidar com isso é usar vários hostnames na página (pag.com e img.pag.com), assim ganhamos mais conexões paralelas.
+
+No HTTP 2 as requisições e respostas são paralelas automaticamente em uma única conexão. É o chamado multiplexing.</p>
+
+<b>Priorização de requests</b><br>
+
+<p>Uma otimização interessante é a de facilitar a renderização inicial, priorizando os recursos necessários para o usuário ver a página primeiro (CSS) e interagir (JS) depois.
+
+No HTTP 2 podemos indicar nos requests quais deles são mais importantes através de priorização numérica. Assim o browser pode dar prioridade alta a um arquivo CSS no head que bloqueia a renderização, e prioridade mais baixa para um JS assíncrono no fim da página.</p>
+
+<b>Server Push</b><br>
+
+<p>Uma gambiarra comum no HTTP 1.1 é fazer inline de recursos, visando a renderização inicial mais rápida. O grande problema aqui é que anulamos o cache do navegador. CSS junto do HTML não pode ser cacheado independentemente.
+
+Aí vem o Server Push no HTML 2. A ideia é ter o servidor mandando alguns recursos para o navegador sem ele ter requisitado ainda. O servidor "empurra" para o navegador recursos que ele sabe que serão requisitados logo. Assim quando o navegador precisar do recurso, já vai ter em cache e não fará um request.</p>
+
+<b>Segurança</b><br>
+
+<p>Um tempo atrás havia uma discussão se HTTP 2 permitiria uso sem SSL (parei de acompanhar faz algum tempo), mas na prática apenas conexões seguras HTTPS serão suportadas. Assim temos segurança e privacidade mais estabelecidas com o protocolo.
+
+
+</p>
