@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+h1{
+	font-family:Verdana;
+	font-size:32px;
+	text-align:center;
+}
+
+.graduacao{
+	font-family:Verdana;
+	color:#09C;
+}
+.pos{
+	font-family:Verdana;
+	color:#00FF80;
+	font-weight:bold;
+}
+.mestrado{
+	font-family:Verdana;
+	color:yellow;
+	font-style:italic;
+}
+.doutorado{
+	font-family:verdana;
+	color:red;
+	text-decoration:underline;
+	
+}
+.primario{
+	font-family:"Times New Roman", Times, serif;
+	font-size:14px;
+	color:#C287CB;
+	text-indent:50px;
+}
+.secundario{
+	font-family:"Times New Roman", Times, serif;
+	font-size:14px;
+	color:#C287CB;
+	text-indent:80px;
+	
+	
+

@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+table{
+	border:#999;
+}
+td{
+	font-family:Verdana;
+	font-size:14px;
+	text-align:center;
+}
+	
+.aprovado{
+	font-family:Verdana;
+	font-size:14px;
+	color:#3C3;
+	font-weight:bold;
+	text-align:center;
+}
+.reprovado{
+	font-family:Verdana;
+	font-size:14px;
+	color:red;
+	font-weight:bold;
+	text-align:center;
+}
+.cor{
+	background-color:#CCC;
+}
