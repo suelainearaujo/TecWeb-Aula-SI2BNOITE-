@@ -8,8 +8,12 @@
 	text-align:center;
 	line-height: 20px;
 	color:red;
+	border: 1px red solid;
 }
 /* ESTILO 2 */
+.ex_2{
+	border: 1px #FFC600 solid;
+}
 h1{
 	font-family:Verdana;
 	font-size:32px;
